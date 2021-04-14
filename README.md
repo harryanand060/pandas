@@ -34,7 +34,7 @@
         copy : (Optional) Copy data from inputs. Boolean, Default False. 
         Only affects DataFrame or 2d array-like inputs
         
-#### Data Frame Overide Default Setting Option
+#### Data Frame Override Default Setting Option
     
 * Setting maximum rows to be shown
         

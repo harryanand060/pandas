@@ -79,7 +79,7 @@ def df_meta_info(df_data):
 
     :return:
     """
-    stats=df_data.info()
+    stats = df_data.info()
     out = f"METHOD: data_frame.describe\n\n"
     out += f"OUTPUT: \n{stats} \n\n"
 
@@ -134,9 +134,68 @@ def fr_attributes(df_data):
     return out
 
 
+def df_top_value(df_data):
+    """
+    Get the Top value from data frame default 5 result will return
+    :param df_data: data frame
+    :return:
+    """
+    return df_data.head(4)
+
+
+def df_last_value(df_data):
+    """
+    Get the last data frame default 5
+    :param df_data: Data frame
+    :return:
+    """
+    return df_data.tail(4)
+
+
+def df_specific_row(df_data):
+    """
+    Get Specific row using index and column name
+    :param df_data: Data Frame
+    :return:
+    """
+    return df_data.at[0, "company"]
+
+
+def df_specific_using_index(df_data):
+    """
+    Get Specific item from data frame using index for both row and column
+    :param df_data:
+    :return:
+    """
+    return df_data.iat[0, 3]
+
+
+def df_specific_range(df_data):
+    """
+    get range of data with multiple column
+    :param df_data:
+    :return:
+    """
+    return df_data.loc[0:2, ["company"]]
+
+
+def df_specific_range_using_index(df_data):
+    """
+    get data from dataframe using index value
+    :param df_data:
+    :return:
+    """
+
+    return df_data.iloc[0:2, 0:3]
+
+
 if __name__ == "__main__":
     data = df_read_csv()
     # print(data.to_json(orient='split'))
-    print(df_statistics(data))
+    # print(df_statistics(data))
     # output.info()
     # print(output)
+    # print(data.loc[0:2,["company"]])
+    # item=df_top_value(data)
+    # print(df_last_value(data))
+    print(df_specific_range_using_index(data))

@@ -50,7 +50,7 @@
 
 #### Read Dictionary 
   
-Read dictionary into Data Frame, we can pass it to the DataFrame 
+Read dictionary into Data Frame, we can pass dict to the DataFrame 
 * Method:
       
             pd.DataFrame(dict)
@@ -67,7 +67,7 @@ Read dictionary into Data Frame, we can pass it to the DataFrame
     
 #### Read CSV, Excel Sheet 
   
-Pandas DataFrame from CSV, we use the read_csv('file_name') function that takes the file name as input and returns DataFrame as output
+Pandas DataFrame from CSV, read_csv('file_name') function that takes the file name as input and returns DataFrame as output
 
 * Method:
       
@@ -90,7 +90,9 @@ Pandas DataFrame from CSV, we use the read_csv('file_name') function that takes 
 Data frame meta information like total rows, total column, data types of column.
 
 * Method:
-  
+    
+        df_data = pd.read_csv("automobile_data.csv")
+      
         df_data.info()
         
 *Output:
@@ -112,7 +114,9 @@ Data frame meta information like total rows, total column, data types of column.
 Mathematical statistics of the data in DataFrame Like Mean, Min, Max data value
 
 * Method:
-        
+  
+        df_data = pd.read_csv("automobile_data.csv")
+  
         df_data.describe()
 
 * Output:

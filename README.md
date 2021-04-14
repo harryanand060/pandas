@@ -8,7 +8,7 @@
 
     automobile_data.csv
 
-*Note: Attached in the repo
+* Note: Attached in the repo
     
 ### Data Frame
 

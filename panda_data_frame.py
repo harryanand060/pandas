@@ -134,13 +134,15 @@ def fr_attributes(df_data):
     return out
 
 
+# Data frame Selection
+
 def df_top_value(df_data):
     """
     Get the Top value from data frame default 5 result will return
     :param df_data: data frame
     :return:
     """
-    return df_data.head(4)
+    return df_data.head()
 
 
 def df_last_value(df_data):
@@ -149,7 +151,7 @@ def df_last_value(df_data):
     :param df_data: Data frame
     :return:
     """
-    return df_data.tail(4)
+    return df_data.tail()
 
 
 def df_specific_row(df_data):
@@ -176,7 +178,7 @@ def df_specific_range(df_data):
     :param df_data:
     :return:
     """
-    return df_data.loc[0:2, ["company"]]
+    return df_data.loc[0:2, ["company","body-style"]]
 
 
 def df_specific_range_using_index(df_data):
@@ -196,6 +198,6 @@ if __name__ == "__main__":
     # output.info()
     # print(output)
     # print(data.loc[0:2,["company"]])
-    # item=df_top_value(data)
+    item=df_specific_range_using_index(data)
     # print(df_last_value(data))
-    print(df_specific_range_using_index(data))
+    print(item)
